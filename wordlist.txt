@@ -1,0 +1,22 @@
+adverse                 -               ungünstig
+aggregate               -               gesamt
+assess                  -               beurteilen
+asset                   -               Vermögen / Aktivposten
+capital adequacy        -               Kapitalunterlegung
+(payments) defaults     -               Zahlungsausfälle
+derive                  -               ableiten
+devoted                 -               gewidmet
+down(side) risk         -               Abschwungsrisiko
+distress                -               Notlage
+equity                  -               Martkwert / Eigenkapital
+insurance premium       -               Versicherungsprämie
+intermediaries          -               Vermittler
+leverage                -               Fremdkapitalaufnahme
+liabilities             -               Schulden
+non-performing loan     -               notleidender Kredit
+resilience              -               Stabilität / Widerstandsfähigkeit
+soundness               -               Bonität
+subprime crisis         -               Hypothekenkrise
+turmoil                 -               Unruhe / Chaos
+volatility              -               Schwankungsanfälligkeit
+vulnerability           -               Anfälligkeit
