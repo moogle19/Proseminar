@@ -2,21 +2,32 @@ adverse                 -               ungünstig
 aggregate               -               gesamt
 assess                  -               beurteilen
 asset                   -               Vermögen / Aktivposten
+burdensome              -               mühsam
 capital adequacy        -               Kapitalunterlegung
+constituent             -               einzeln
 (payments) defaults     -               Zahlungsausfälle
 derive                  -               ableiten
+deterioration           -               Verschlechterung
 devoted                 -               gewidmet
 down(side) risk         -               Abschwungsrisiko
 distress                -               Notlage
 equity                  -               Martkwert / Eigenkapital
+feasibility             -               Machbarkeit
+imposed                 -               auferlegt
 insurance premium       -               Versicherungsprämie
 intermediaries          -               Vermittler
+Interest rate           -               Zinssatz
 leverage                -               Fremdkapitalaufnahme
 liabilities             -               Schulden
 non-performing loan     -               notleidender Kredit
 resilience              -               Stabilität / Widerstandsfähigkeit
+secularization          -               Verweltlichung
+severity                -               Härte
 soundness               -               Bonität
 subprime crisis         -               Hypothekenkrise
+term                    -               Zeitdauer
+tranche                 -               Teil
 turmoil                 -               Unruhe / Chaos
 volatility              -               Schwankungsanfälligkeit
 vulnerability           -               Anfälligkeit
+yield                   -               Ertrag / Gewinn
