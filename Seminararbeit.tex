@@ -58,7 +58,7 @@ Diese Publikation ist in 3 grobe Abschnitte unterteilt. Im ersten Abschnitt wird
 
 Im ersten Abschnitt der Methodik geht des um das systemische Risiko. Es wird hier als Prämie für eine Versicherung gegen finanzielle Ausfälle innerhalb der nächsten 12 Monate dargestellt. Diese Versicherungsprämie errechnet sich aus den vorhergesagten Ausfallwahrscheinlichkeiten und der Korrelation der Unternehmensrentabilität. Die Messungen sind marktbasiert und damit deutlich hochfrequenter als eine Auswertung anhand von Bilanzen, welche meist quartalsweise erscheinen. 
 
-Der zweite Abschnitt der Methodik befasst sich mit dem Stresstest ihres Systems zur Bestimmung des systemischen Risikos. Für die Durchführung dieses Stresstests wird ein integriertes Mikro-Makro-Modell genutzt, welche nicht nur die Auswirkungen des Marktes auf das Bankwesen berücksichtigt, sondern auch die Rückwirkung des Bankwesens auf den Rest der Ökonomie. Dieser Stresstest besteht aus zwei Schritten. Im ersten Schritt wird das ökonomisches Modell dazu genutz den Zusammenhang zwischen der Anlagenqualität und den zugrundeliegenden Faktoren zu prüfen. Der zweite Schritt besteht darin, mit Hilfe des Modells, die Auswirkungen von extremen Änderungen der zugrundeliegenden Faktoren, auf den Finanzmarkt zu bestimmen. Hierbei werden, in der Regel, historische oder hypothetische Szenarien verwendet.
+Der zweite Abschnitt der Methodik befasst sich mit dem Stresstest ihres Systems zur Bestimmung des systemischen Risikos. Für die Durchführung dieses Stresstests wird ein integriertes Mikro-Makro-Modell genutzt, welche nicht nur die Auswirkungen des Marktes auf das Bankwesen berücksichtigt, sondern auch die Rückwirkung des Bankwesens auf den Rest der Ökonomie. Dieser Stresstest besteht aus zwei Schritten. Im ersten Schritt wird das ökonomisches Modell dazu genutzt den Zusammenhang zwischen der Anlagenqualität und den zugrundeliegenden Faktoren zu prüfen. Der zweite Schritt besteht darin, mit Hilfe des Modells, die Auswirkungen von extremen Änderungen der zugrundeliegenden Faktoren, auf den Finanzmarkt zu bestimmen. Hierbei werden, in der Regel, historische oder hypothetische Szenarien verwendet.
 
 Auf die verwendeten Beispieldaten wird im zweiten Abschnitt der Arbeit eingegangen. Hierbei wurden die Daten und Werte der zwölf größten amerikanischen Banken über die Jahre 2001 bis 2008 genutzt.
 
@@ -67,7 +67,17 @@ Im dritten und letzten Abschnitt werden die Ergebnisse dargelegt, welche durch A
 
 \section{Methodisches Vorgehen}
 \subsection{Bestimmung des systemischen Risikos}
+Zur Bestimmung des systemischen Risikos werden zwei Schritte durchlaufen. Zunächst wird das Risikoprofil eines Portfolios bestimmt. Dies geschieht anhand der Ausfallwahrscheinlichkeit und der Kapitalrenditen-Korrelation.
+Im zweiten Schritt wird aus diesen beiden Werten der Indikator für das systemische Risiko errechnet, was in unserem Fall die Prämie einer theoretischen Versicherung gegen einen größeren Verlust ist.
+\subsubsection{risiko-neutrale Ausfallwahrscheinlichkeit}
+Die risiko-neutrale Ausfallwahrscheinlichkeit wird direkt aus den Kreditausfall-Swap-Prämien errechnet. Die Formel hierzu lautet: 
+\begin{equation}
+PD_{i,t}=\frac{a_t s_{i,t}}{a_t LGD_{i,t}+b_t s_{i,t}}
+\end{equation}
+$PD_{i,t}$ ist hierbei die risiko-neutrale Ausfallwahrscheinlichkeit, $s_{i,t}$ ist die Kreditausfall-Swap-Prämie, $LGD_{i,t}$ ist die Verlustquote. $a_t \equiv \int_{t}^{t+T} e^{-r \tau}d \tau$ und $b_t \equiv \int_{t}^{t+T} \tau e^{-r \tau}d \tau$, wbei $r$ der risikofreie Zinssatz ist.
 
+
+\subsubsection{Kapitalrenditen-Korrelation}
 Test auf Seite 2!
 \newpage
 \subsection{Stresstest}
