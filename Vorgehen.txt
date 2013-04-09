@@ -1,4 +1,4 @@
-1.Question: Wesentliche Frage die ich in meiner Arbeit beantworten will.
+1. Question: Wesentliche Frage die ich in meiner Arbeit beantworten will.
 
 2. Motivation: Warum ist diese Frage spannend?
 
@@ -17,4 +17,18 @@ Hauptteil:
     Approach / Results / Contribution
     
 Schluss:
-    Hier fassen Sie die wichtigsten Aussagen zusammen beschreiben nochmals den Beitrag der Arbeit und geben gegebenenfalls einen Ausblick /     Einschätzung.
+    Hier fassen Sie die wichtigsten Aussagen zusammen beschreiben nochmals den Beitrag der Arbeit und geben gegebenenfalls einen Ausblick /     Einschätzung. Eigene Einschätzung. 1 1/2 - 2 Seiten.
+
+Eigenleistung:   
+    Text verstehen, grobe Implikation verstehen, oben stehende Fragen beantworten und wiedergeben 
+    !ABER keine simple Punkt für Punkt Zusammenfassung!
+
+    Einordnung des Papers zu anderer Forschungsliteratur.
+        Gibts es andere/neuere Aufsätze zum gleichen Thema? 
+        Bestätigen andere Autoren die Ergebnisse oder stehen sie zu Ihrem Paper in Kontrast?
+        Was sind die wesentlichen Unteschiede Ihres Papers im Vergleich zu anderen?
+
+    Richtige Schwerppunktsetzung:
+        Was ist notwendig un die wesentliche Story des Papers zu verstehen und dem Publikum darzulegen?
+        Denken Sie immer den Punkt "Question"!
+
