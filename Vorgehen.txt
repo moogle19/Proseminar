@@ -1,0 +1,20 @@
+1.Question: Wesentliche Frage die ich in meiner Arbeit beantworten will.
+
+2. Motivation: Warum ist diese Frage spannend?
+
+3. Approach: Wie beantworte ich bzw die Autoren diese Frage?
+
+4. Results: Zu welchen Ergebnissen komme ich / die Autoren? 
+
+5. Contribution: Welche Schlüsse kann man aus diesen Ergebnissen ziehen bzw. was ist der Beitrag dieser Arbeit.
+
+
+Einleitung:
+    Alle diese Punkte sollten kurz in der Einleitung angesprichen werden
+    Approach / Results / Contribution nur kurz als Ausblick auf den Hauptteil
+    
+Hauptteil:
+    Approach / Results / Contribution
+    
+Schluss:
+    Hier fassen Sie die wichtigsten Aussagen zusammen beschreiben nochmals den Beitrag der Arbeit und geben gegebenenfalls einen Ausblick /     Einschätzung.
