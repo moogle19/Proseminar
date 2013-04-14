@@ -70,10 +70,36 @@ Im folgenden werde ich zuerst das Vorgehen zur Bestimmung des Indikators für da
 \section{Bestimmung eines Indikators für das systemische Risiko}
 Um eine Kenngröße für das systemische Risiko zu ermitteln, müssen zuerst die zugrundeliegenden Wert ermittelt werden. In diesem Fall setzt sich diese aus dem Risikoprofil, der prognostizierten Ausfallwahrscheinlichkeit und der Korrelation der Vermögensrenditen zusammen. Erst nachdem diese Größen ermittelt wurden, lässt sich darauf ein Indikator für das systemisches Risiko bilden.
 \subsection{Ermittlung der risikoneutralen Ausfallwahrscheinlichkeiten}
-Die risikoneutrale Ausfallwahrscheinlichkeit is einer der Hauptbestandteile zur Bestimmung des systemischen Risikos. In dieser Arbeit wird die Ausfallwahrscheinlichkeit anhand von CDS-Spreads bestimmt.
-Ein Credit Default Swap ist eine Art Verischerung für Kreditgeber. Der Kreditgeber zahlt eine Vericherungsprämie, den CDS Spread, an einen Sicherungsgeber und sichert sich damit gegen diverse Ereignisse, wie Bankrott der Kreditnehmers oder Zahlungsausfälle, ab. Die Höhe der Versicherungsprämie ist abhängig von der Ausfallwahrscheinlichtkeit und dem Verlust bei Zahlungsausfall.  Tritt ein solches Ereignisse ein, zahlt der Sicherungsgeber eine Ausgleichszahlung an der Kreditgeber.
+Die risikoneutrale Ausfallwahrscheinlichkeit ist eine der Hauptkomponenten bei der Bestimmung des systemischen Risikos. In dieser Arbeit wird die Ausfallwahrscheinlichkeit anhand von CDS-Spreads bestimmt.
 
-Aus den CDS Spread lässt sich nun nach Duffie (1999) und Tarashev und Zhu (2008)\footnote{vgl. Huang et al S.5.} direkt die risikoneutrale Ausfallwahrscheinlichkeit bestimmen. Für die errechnete Ausfallwahrscheinlichkeit müssen jedoch einige Vorraussetzungen erfüllt sein. Zum einen muss eine konstante und risikofreie Zinsstruktur vorliegen, zum anderen muss eine flache Terminstruktur der Ausfallintensität gegeben sein. Des Weiteren muss Unabhängigkeit zwischen dem Armortisationsrisiko und dem Ausfallrisiko bestehen.
+Ein Credit Default Swap ist eine Art Verischerung für Kreditgeber. Der Kreditgeber zahlt eine Vericherungsprämie, den CDS Spread, an einen Sicherungsgeber und sichert sich damit gegen diverse Ereignisse, wie Bankrott des Kreditnehmers oder Zahlungsausfälle, ab. Die Höhe der Versicherungsprämie ist abhängig von der Ausfallwahrscheinlichtkeit und dem Verlust bei Zahlungsausfall.  Tritt ein solches Ereignisse ein, zahlt der Sicherungsgeber eine Ausgleichszahlung an der Kreditgeber.
+
+Aus den CDS Spread lässt sich nun nach Duffie (1999) und Tarashev und Zhu (2008)\footnote{vgl. Huang et al S.5.} direkt die risikoneutrale Ausfallwahrscheinlichkeit bestimmen. Für die errechnete Ausfallwahrscheinlichkeit müssen jedoch einige Vorraussetzungen erfüllt sein. Zum einen muss eine konstante und risikofreie Zinsstruktur vorliegen, zum anderen muss eine flache Terminstruktur der Ausfallintensität gegeben sein. Des Weiteren muss eine Unabhängigkeit ziwschen dem Amortisationsrisiko und dem Ausfallrisiko existieren. 
+
+Durch die CDS Spreads können drei Faktoren für die Ausfallwarscheinlichkeit bestimmt werden. Zuerst wäre das die Kompensation von tatsächlichen Zahlungsausfällen. Hinzu kommt die Ausfallrisikoprämie, welches eine Gebühr ist, die der Kreditnehmer an den Kreditgeber zahlt, um ihn gegen mögliche, eigene Zahlungsausfälle abzusichern. Als letztes lassen sich noch weitere Prämienzahlungen aus den CDS Spreads ableiten, wie zum Beispiel die Liquiditätsrisikoprämie, eine Rendite, welche für inliquide Anleihen gezahlt wird, da ein Kauf und Verkauf für diese Art von Anleihen schwieriger ist und dieser Mehraufwand vergütet wird.
+
+Weitere Vorteile bei der Nutzung von CDS Spreads zur Berechnung unserer Ausfallwahrscheinlichkeit ist zum einen die Risikoneutralität. Dadurch, dass bei den CDS Spreads sowohl die wirkliche Ausfallwahrscheinlichkeit, als auch die Risikoprämien berücksichtigt werden, ist es eine risikoneutrale Messung.
+Ebenso ist es ein Vorteil, das die aus CDS Spreads bestimmte Ausfallwahrscheinlichtkeit zukunftsorientiert ist. Dies ist der Fall, da durch die Verwendung von CDS Spreads, die durchschnittliche risikoneutrale Ausfallwahrscheinlichkeit innerhalb der Vertragslaufzeit des Credit Default Swaps wiedergegeben wird. 
+So bekommt man nicht, wie zum Beispiel durch Bilanzen, einen Blick darauf, was mit dem Unternehmen passiert ist, sondern man bekommt einen Ausblick darauf, was in nächster Zeit mit dem Unternehmen passieren wird.
+Als letztes ist anzumerken, das hier die Standardannahme einer flachen Laufzeitstruktur der Ausfallintensität gemacht wird. Diese Annahme könnte in der Realität verletzt werden, dies hat jedoch keine großen Auswirkungen auf das Endergebnis.
+
+\subsection{Korrelation der Kapitalrenditen}
+Der zweite wichtige Faktor zur Ermittlung einer Kenngröße für das systemische Risiko ist die Korrelation der Zahlungsausfälle. Um diese zu bestimmen, gibt es zwei Möglichkeiten. Zum einen kann man auf historische Daten zurückgreifen und dadurch die Korrelation der Zahlungsausfälle bestimmen. Das Problem hierbei ist, das durch die Seltenheit von Zahlungsausfälle bei großen Banken kein verlässliches Ergebnis herauskommt. 
+
+Der zweite Ansatz besagt, dass die Ausfallkorrelation indirekt berechnet wird. Dies geschieht mit Hilfe der Korrelation der Gesamtkapitalrendite vom Aktien oder Kreditmarkt. Nach Hull und White (2004) ist es in der Praxis jedoch möglich die als Stellvertreter für die Gesamtkapitalrenditenkorrelation die Korrelation des Eigenkapitals zu verwenden. Dies ist möglich, da sich aus einer Veränderung der Aktienpreise auf die Veränderung im Gesamtkapital schließen lässt.
+
+Dieser zweite Ansatz wird auch hier genutzt, da das Eigenkapital die höchste Liquidität auf dem Markt aufweist. Der aktuelle Zustand des Marktes und das mögliche Ausfallrisiko spiegeln sich direkt in den Aktienkursen wieder. Außerdem gibt es diese Tick-by-Tick Daten nur auf dem Aktienmarkt. 
+Durch diese schnellen, über kurze Zeitintervalle bestimmten Korrelationswerte ist es möglich noch bessere Vorraussagen für die zukünftigen Korrelationen zu treffen. 
+
+Die Benutzung der Fremdkapitalkorrelation als Ersatz für die Gesamtkapitalkorrelation ist jedoch nur bei konstantem Leverage möglich, da dann gegeben ist, das die die Korrelation des Fremdkapitals gleich der Korrelation des Gesamtkapital ist. Bei zeitlich schwankendem Leverage gehen diese Werte deutlich auseinander. 
+In kurzen Zeitabständen kann man jedoch davon ausgehen, dass der Leverage relativ konstant bleibt und die Abweichungen sich nicht auf das Gesamtergebnis auswirken. Deshalb werden hier nur Zeiträume, welche kürzer als ein Quartal sind, analysiert. \footnote{Ein konstanter Leverage über einen Monat war bei 11 der 12 Banken gegeben. Nach zwei Monaten waren es noch 10 Banken. Erst ab dem Zeitraum von drei Monaten war ein großer Rückgang auf 7 Banken zu beobachten. Nach 6 Monaten wiesen nurnoch 4 Banken einen konstanten Leverage vor.}
+
+
+Durch diese Herangehensweise, unter der Berücksichtigung der aktuellen Marktentwicklung, statt der Analyse von historischen Daten, ist eine vorwärtsgerichtete Untersuchung der Korrelationen möglich. Das deckt sich mit unserer Berechnung der Ausfallwahrscheinlichkeiten welche ebenfalls zukunftsorientiert sind. Aus diesen beiden Tatsachen folgt, dass auch unser Indikator für das systemische Risiko ein vorwärtsgerichteter Wert und somit zukunftsorientiert ist.
+
+\subsection{Bestimmung des Indikators für das systemische Risiko}
+
+
 \section{Methodisches Vorgehen}
 \subsection{Bestimmung des systemischen Risikos}
 Zur Bestimmung des systemischen Risikos werden zwei Schritte durchlaufen. Zunächst wird das Risikoprofil eines Portfolios bestimmt. Dies geschieht anhand der Ausfallwahrscheinlichkeit und der Kapitalrenditen-Korrelation.
