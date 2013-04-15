@@ -102,8 +102,40 @@ Nachdem die Variablen, welche zur Berechnung des systemischen Risikos benötigt 
 
 Für die Berechnung werden die gesamten Schuldverschreibungen der Banken, gewichtet nach Höhe der Gesamtverbindlichkeiten der einzelnen Banken, in einem hypotetischen Portfolio zusammengefasst. Für dieses Portfolio wird nun die risikoneutrale Erwartung von Kreditverlusten, welche gleich oder höher einem kleinen Anteil der Gesamtverbindlichkeiten sind, errechnet.
 
+Der Grund für die Wahl der theoretischen Versicherungssumme als Indikator gegenüber alternativen Methoden zur Bestimmung des systemischen Risikos, liegt an der einfachen Interpretation und Vergleichbarkeit dieses Werts. Dies ist möglich, da es sich bei dem Wert um eine risikoneutrale Größe handelt und nicht wie bei anderen Methoden, wie zum Beispiel der gemeinsamen Ausfallwahrscheinlichkeit oder dem erwarteten Defizit, eher um physische Größen.  
+Ein weitere Grund für die Wahl ist, die Unabhängigkeit von einer Erhöhung der Gesamtverbindlichkeiten, da der Wert als Einheit pro offener Position berechnet wird.
+
+Außerdem ist diese Indikator sehr intuitiv, da er äquivalent zu der Prämie für ein hypothetisches risikobasiertens Depositverischungsschema ist, welches alle Kreditverluste abdeckt, solange sie über dem minimalen Anteil der Gesamtverbindlichkeiten liegen.
+
+Der Indikator für das systemische Risiko hat ebenfalls den Vorteil, dass er sich, sowohl bei einer steigenden Ausfallwahrscheinlichkeit, als auch bei steigender Korrelation, ebnefalls erhöht, was sich auch mit der generallen Annahme deckt, dass das systemische Risiko  bei höherer Fehlerrate der einzelnen Banken oder hoher Belastung eines einzelnen Risikofaktors erhöht.
+
+Zur letztlichen Berechnung des Indikators wird eine Monte-Carlo-Simulation verwendet. Mit Hilfe dieser wird die risikoneutrale Wahrscheinlichkeit von Kreditverlusten des zugrunde liegenden Portfolios berechnet. Dafür wird nun auch der dritte Wert der Kreditrisikokomponenten mit einbezogen, der Loss Given Default oder auch Verlustquote. Dieser Loss Given Default ist unabhängig von der Ausfallwahrscheinlichkeit und folgt einer stochastischen Verteilung. Der Wert liegt zwischen 0.1 und 1 mit einem Mittel von 0.55, was sich auch mit anderen Untersuchungen deckt.
+
+\subsection{Erstellung von Stresstest-Szenarien}
+Für die Erstellung eines Stresstest Modells ist es zuerst einmal nötig die Verbindungen zwischen den makrofinanziellem Teil der Ökonomie und den Kreditrisikoparametern unseres Portfolios, den Ausfallwahrscheinlichkeiten und der Korrelation, herzustellen. Dadurch können wir später die Auswirkungen von einem Sckock auf das systemische Risiko genauer bestimmen. 
+Dieser Effekt eines Schocks auf das systemische Risiko wird hier anhand von historischen Ereignissen und hypotetischen Daten untersucht. Hierfür wird ein integriertes Mikro-Makro-Modell erstellt, welches eine Verbindung zwischen den Kreditrisikofaktoren des Bankenmarktes und einer Liste von makrofinanziellen Variablen herstellt. Diese Variablen beschreiben die Entwicklungen in der Makroökonumie und auch im Finanzmarkt.
+Diese Modell besteht insgesamt aus zwei Teilen. Zum einen dem Makroteil, welcher eine VAR-Analyse nutz, um den Zustand des Bankensystems unter Berücksichtigung der generellen Marktsituation, zu bestimmen. Des Weiteren liefert die Analyse auch die Rückwirkung von Veränderungen des Bankenmarktes auf den generellen Markt und stellt damit diese Verbindung dynamisch dar.
+
+Im zweiten, dem Mikroteil, geht es um die Modellierung der Abhängigkeit des Ausfallrisikos von den Kreditrisikofaktoren des Finanzsystems und anderen Finanzmarktvariablen.
 
 
+
+Als letztes geht es um die Erstellung eine Stresstestszenarios. Diese werden, basierend auf den hypotetischen oder historischen Schocks auf die einzelnen Variablen des genutzten VAR-Systems, erstellt. 
+Dann werden diese Schocks in das dynamische Micro-Makro-System gegeben und die resultierenden Änderungen der Variablen führt dann auch zu Änderungen an der vorhergesagten Ausfallwahrscheinlichkeit und der prognostizierten Korrelation. Durch die Änderungen an diesen Kenngrößen ändert sich dann auch unser errechnetes systemisches Risiko. 
+
+Die erste Stresstestmethode basiert auf hypothetischen Ansatz. Dabei wird das Stresstestszenario anhand von statistischen Größen der Schockvariablen in diesem Modell erstellt. Hierzu wird die Bootstrap-Methode verwendet, bei der Statistiken auf der Grundlage von Stichproben berechnet werden. Diese Methode wird angewandt, wenn die theoretische Verteilung einer Statistik nicht bekannt ist.
+Das Bootstraping wird hier benutzt, um den Weg des Schocks und die Auswirkungen auf die Kreditrisikofaktoren und die makrofinanziellen Faktoren  über die nächsten 12 Wochen zu simulieren. 
+Diese Simulationen sind mehrfach implementiert und die Stresstestszenarien sind definiert als Menge von Szenarien, welche eine höchst signifikante Erhöhung des systemischen Risikos zu Folge haben.
+Für jede dieser Simulationen wird anschließend die Auswirkung auf den Indikator für das systemische Risiko neu berechnet. 
+
+Die zweite Stresstestmethode nutzt historische Szenarien. Dabei werden Daten von bekannten, historischen Marktunruhen verwendet. Ein Problem das hierbei auftritt ist, dass einige Daten, wie zum Beispiel CDS Spreads und Tagesverläufe von Aktienkursen, nur über kurze Zeiträume verfügbar sind. Daher benötigt man ein angepasstes, kleineres VAR-Modell, welches nur makrofinanzielle Variablen berücksichtigt, dafür aber auch Wert über längere Zeitperioden abschätzen kann.
+Der Schock auf diese makrofinanziellen Variablen wird dann in das Modell gegeben und die Auswirkungen auf die Faktoren des systemischen Risikos und auf das systemische Risiko allgemein werden beobachtet.
+
+Diese beiden Systeme für einen Stresstest ergänzen sich gegenseitig und erzeugen ein generelles Bild über die Schwachstellen des Finanzsektors sowohl aus historischer, als auch aus statistischer Sicht. Dabei konzentrieren sich beide Methoden jedoch auf unterschiedliche Schwerpunkte.
+Die erste, hypothetische Methode ist im Gegensatz zur zweiten vorrausschauend und hat den Vorteil die möglichen Bewungungen des Marktes, sowohl aufwärts als auch abwärts, genau zu beschreiben. 
+
+Die historische Methode hingegen betrachtet nur das Rückgangsrisiko, ist jedoch leichter zu interpretieren, da man eine Verbindung zu einer historischen Krise herstellen kann. Dadurch sind die Auswirkungen und deren Ursachen leichter verständlich.
+\newpage
 \section{Methodisches Vorgehen}
 \subsection{Bestimmung des systemischen Risikos}
 Zur Bestimmung des systemischen Risikos werden zwei Schritte durchlaufen. Zunächst wird das Risikoprofil eines Portfolios bestimmt. Dies geschieht anhand der Ausfallwahrscheinlichkeit und der Kapitalrenditen-Korrelation.
