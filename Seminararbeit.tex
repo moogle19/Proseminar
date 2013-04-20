@@ -4,6 +4,7 @@
 \usepackage{setspace}
 \onehalfspacing
 \usepackage{geometry}
+\usepackage{graphicx}
 \geometry{a4paper, top=25mm, left=30mm, right=25mm, bottom=25mm}
 
 \title{Proseminar 2013}
@@ -136,6 +137,48 @@ Die erste, hypothetische Methode ist im Gegensatz zur zweiten vorrausschauend un
 
 Die historische Methode hingegen betrachtet nur das Rückgangsrisiko, ist jedoch leichter zu interpretieren, da man eine Verbindung zu einer historischen Krise herstellen kann. Dadurch sind die Auswirkungen und deren Ursachen leichter verständlich.
 \newpage
+
+\section{Ergebnisse unter Anwendung der Methodik}
+Nun wird das vorher erläuterte Verfahren auf reale Daten angewandt, um zu überprüfen wie es sich unter echten Bedingungen verhält und ob die Ergebnisse sich mit den echten Entwicklungen decken. Dabei wird hier das Bankensystem der USA als Beispiel verwendet. Die zwölf größten Banken der USA werden dabei, als Repräsentanten für das US-Bankensystem, über die Jahre 2001 bis 2008 beobachtet. Diese Gruppe von Banken besteht aus der Bank of America, der Bank of New York, Bear Stearns, Citibank, Goldman Sachs, JP Morgan Chase, Lehman Brothers, Merrill Lynch, Morgan Stanley, State Street Corp, Wachovia und Wells Fargo. Sie wurden gewählt, da eine Veränderung des Kreditrisikos dieser Banken sich auch auf den ganzen Finanzmarkt ausüben würden.
+
+%\begin{figure}[htb]
+%	\centering
+%		\includegraphics[height=8cm]{Pictures/Table2.png}
+%		\caption{Bildunterschrift}
+%\end{figure}
+Dazu wird zunächst der Indikator für das systemische Risiko über die Beispielperiode bestimmt und anschließend wird mit Hilfe des Stresstests die Verwundbarkeit durch einen Schock des Systems bewertet.
+
+\subsection{Der Indikator des systemischen Risikos}
+Wie schon im vorherigen Teil, welcher auf das methodische Vorgehen eingeht, beschrieben, ist es notwendig zuerst die Ausfallwahrscheinlichkeit und die Gesamtkapitalkorrelation der Banken für den Verlauf des nächsten Quartals zu bestimmen.
+Die risikoneutrale Ausfallwahrscheinlichkeit wird hier zuerst berechnet. Diese lässt sich aus den CDS Spreads ableiten und ist damit einfach zu bestimmen.
+Die Korrelation lässt sich nicht von einer anderen Größe ableiten und muss daher abgeschätzt werden.
+
+
+\subsubsection{Korrelationsbestimmung mit Hilfe von hochfrequenten Werten}
+Um den Nutzen der Korrelationsbestimmung aus hochfrequenten Daten zu zeigen,  werden Regressionsanalysen durchgeführt. Mit Hilfe dieser Analysen ist es möglich die Beziehungen zwischen Variablen zu bestimmen.
+Insgesamt sind es drei Regressionsanalysen die hier durchgeführt werden.
+
+Für die erste Regressionsanalyse werden die erzielten Korrelationen über ein Quartal in Abständen von einer Woche verwendet. Durch den kurzen Zeitabstand von einer Woche lässt sich die zukünftige Korrelation sehr gut bestimmen, da sie auch die jüngsten Änderungen in den Korrelationen beinhalten. Das Ergebnis der Analyse zeigt, dass alle erklärenden Variablen eine starke und positive Auswirkung auf die Korrelation des nächsten Quartals haben. Die zeigt sich auch beim Bestimmtheitsmaß $R^2$ von 0.54, was auf eine starke Beziehung zwischen den Variablen hindeutet.
+
+
+Die zweite Regressionsanalyse verwendet, statt der kurzzeitigen Korrelationen, eine Liste von gegenwärtigen Marktfaktoren aus der aktuellen Periode. Die verwendeten Faktoren sind zum Beispiel die Federal Funds Rate \footnote{Der Zinssatz, zu dem sich die US-amerikanischen Banken untereinander Geld leihen.}, den Term Spread \footnote{Die Differenz zwischen langfristigen und kurzfristigen Zinsen.} ,den Standard & Poor's 500 \footnote{Ein Aktienindex, welcher die 500 größten US-amerikanischen, börsennotierten Firmen umfasst.} und die implizierte Schwankungsanfälligkeit.
+Die ist die beste Möglichkeit die zukünftigen Korrelationen zu bestimmen, ohne dabei auf die Tick-by-Tick Werte von Korrelationen zurückzugreifen.
+Aus dieser Analyse heraus lässt sich sagen, dass man mit Hilfe der verzögerten Korrelation über ein Quartal und den Werten des Standard & Poors 500 Aktienindex, die zukünftige Korrelation gut bestimmen kann. 
+Durch die Beständigkeit der Korrelation lässt sich zudem schließen, dass eine hohe verzögerte Korrelation auch zu einer hohen zukünftigen Korrelation führt und das aus niedrigen Marktgewinnen eine hohe Korrelation entsteht, welche sich  wiederum durch ein hohes systemischen Risiko ausdrückt.
+Bei dieser Analyse beträgt $R^2$ = 0.55.
+
+In der dritten Regressionsanalyse werden alle Variablen aus den hervorgegangen Analysen verwendet, was in dem Wert von 0.56 für $R^2$ resultiert. Dies zeigt, dass unter der Zuhilfenahme der verzögerten Korrelation, der Marktgewinne und hochfrequenten Korrelation, eine sehr gute Vorhersage für zukünftige Korrelationen gemacht werden kann. Dies wird noch verstärkt durch eine sehr niedrige Fehlerrate von 0.0036, welche deutlich unter der Fehlerrate liegt, die man bei einer direkten Bestimmung aus den Gesamtkapitalkorrelationen erhält (0.0051). 
+
+\subsubsection{Indikator des systemischen Risikos im Bankensektor}
+Durch die nun bestimmten Ausfallwahrscheinlichkeiten und Korrelation lässt sich der Indikator für das systemische Risiko gegen größere Ausfälle im Bankensektor bilden. Hier werden größere Ausfälle, als Ausfälle von mehr als 15\% der Gesamtverbindlichkeiten des Finanzsektors definiert.
+Da für unsere verwendete Methodik eine risikoneutrale Ausfallwahrscheinlichkeit verwendet wird, lässt sich diese hier einfach bestimmen. Die Versicherungsprämie entspricht nämlich der Erwartung eines hypothetischen Portfolios der Banken, welche gleich gleich oder größer des Schwellenwertes von 15\% ist. Dafür die die aktuellste ''Portfolio Credit Risk Technology''\footnote{vgl. Huang et al. S.16 Z.21.} verwendet. Diese basiert auf einer Monte-Carlo-Simulation wie von Tarashev und Zhu (2008) beschrieben. 
+Die SImulation besteht aus zwei Stufen. Zuerst werden verschiedene Joint Default Szenarien, basierend auf den einzelnen Ausfallwahrscheinlichkeiten und Korrelationen, simuliert. Im zweiten Schritt werden, anhand der Ergebnisse aus Schritt 1, die Loss Given Defaults und die gesamten Kreditverluste simuliert. 
+Dieses Vorgehen ist zwar sehr umfangreich und mühsam, hat jedoch den Vorteil, dass es ein allgemeingültiges Ergebnis liefert.
+Dieses Vorgehen passt sehr gut zu unserer Methodik, da die Ausfallwahrscheinlichkeiten der einzelnen Banken verschiedenartig sind, die unterliegenden Variablen ungleich gewichtet sind und der Loss Given Default stochastisch unabhängig von der Ausfallwahrscheinlichkeit ist. 
+
+\newpage
+\newpage
+
 \section{Methodisches Vorgehen}
 \subsection{Bestimmung des systemischen Risikos}
 Zur Bestimmung des systemischen Risikos werden zwei Schritte durchlaufen. Zunächst wird das Risikoprofil eines Portfolios bestimmt. Dies geschieht anhand der Ausfallwahrscheinlichkeit und der Kapitalrenditen-Korrelation.
