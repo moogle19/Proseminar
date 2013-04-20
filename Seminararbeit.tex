@@ -227,7 +227,9 @@ Abschließend lässt sich sagen das die Leistung des hier vorgestellten Modells 
 Diese Ausreißer traten auch nur bei sehr überraschenden Marktereignissen ein, so war der erste Ausreißer zwischen Juli und September 2007, zu Beginn der Immobilenkrise, zu beobachten und der zweite Ausreißer im März 2008, als die Immobilienkrise iheren Höhepunkt hatte. Diese Fehler kamen aufgrund der starken Verschlechterung des Marktes zustande, mit welcher nicht zu rechnen war.
 
 \section{Fazit}
-
+Es wurde ein gutes Modell zur Messung des systemischen Risikos der größten Finanzinstitute erstellt, wobei die zugrundeliegende Methodik allgemein gültig ist. Das hat den Vorteil, dass sie sich auf jede andere Gruppe von Firmen übertragen lässt, solange die öffentlich handelbares Eigenkapital und Credit Default Swap Verträge besitzen.
+In diesem Modell setzt man auf eine erweiterte hochfrequente Technik zur Bestimmung der erzielten Korrelationen, mit der gezeigt wird, das man dadurch die zukünftigen Bewegungen der Gesamtkapitalerträge bestimmen kann.
+Des Weiteren erlauben die vorrausschauenden Messungen einen Einblick auf die zukünftige Marktwahrnehmung anhand der Höhe der Versicherungsprämie der theoretischen Versicherung gegen eine Notlage des Bankensystems. Dieser Indikator steigt, wenn die durschnittliche Ausfallrate steigt und wenn das Gefahrenpotenzial gemeinsamer Faktoren steigt.
 
 
 \begin{figure}[htb]
@@ -238,53 +240,53 @@ Diese Ausreißer traten auch nur bei sehr überraschenden Marktereignissen ein, 
 
 
 \newpage
-\newpage
+% \newpage
 
-\section{Methodisches Vorgehen}
-\subsection{Bestimmung des systemischen Risikos}
-Zur Bestimmung des systemischen Risikos werden zwei Schritte durchlaufen. Zunächst wird das Risikoprofil eines Portfolios bestimmt. Dies geschieht anhand der Ausfallwahrscheinlichkeit und der Kapitalrenditen-Korrelation.
-Im zweiten Schritt wird aus diesen beiden Werten der Indikator für das systemische Risiko errechnet, was in unserem Fall die Prämie einer theoretischen Versicherung gegen einen größeren Verlust ist.
-\subsubsection{Risiko-neutrale Ausfallwahrscheinlichkeit}
-Die Ausfallwahrscheinlichkeit beschreibt die Wahrscheinlichkeit, dass eine Forderung nicht zurückgezahlt wird.
+% \section{Methodisches Vorgehen}
+% \subsection{Bestimmung des systemischen Risikos}
+% Zur Bestimmung des systemischen Risikos werden zwei Schritte durchlaufen. Zunächst wird das Risikoprofil eines Portfolios bestimmt. Dies geschieht anhand der Ausfallwahrscheinlichkeit und der Kapitalrenditen-Korrelation.
+% Im zweiten Schritt wird aus diesen beiden Werten der Indikator für das systemische Risiko errechnet, was in unserem Fall die Prämie einer theoretischen Versicherung gegen einen größeren Verlust ist.
+% \subsubsection{Risiko-neutrale Ausfallwahrscheinlichkeit}
+% Die Ausfallwahrscheinlichkeit beschreibt die Wahrscheinlichkeit, dass eine Forderung nicht zurückgezahlt wird.
 
-In diesem Modell wird die risiko-neutrale Ausfallwahrscheinlichkeit verwendet. Bei einer risiko-neutralen Bewertung wird nicht wie sonst mit einem Zinssatz abgezinst, welcher eine Risikoprämie enthält, sondern mit dem risikofreien Zinssatz. Somit kann man den Erwartungswert berechnen und mit dem risikofreien Zinssatz auf den heutigen Wert abzinsen. Daraus erhält man den fairen Preis, welcher sowohl in der risikoneutralen, als auch in der nicht risikoneutralen Welt gilt.
-Diese risiko-neutrale Ausfallwahrscheinlichkeit wird in unserem Fall direkt aus den Kreditausfall-Swap-Prämien errechnet. 
+% In diesem Modell wird die risiko-neutrale Ausfallwahrscheinlichkeit verwendet. Bei einer risiko-neutralen Bewertung wird nicht wie sonst mit einem Zinssatz abgezinst, welcher eine Risikoprämie enthält, sondern mit dem risikofreien Zinssatz. Somit kann man den Erwartungswert berechnen und mit dem risikofreien Zinssatz auf den heutigen Wert abzinsen. Daraus erhält man den fairen Preis, welcher sowohl in der risikoneutralen, als auch in der nicht risikoneutralen Welt gilt.
+% Diese risiko-neutrale Ausfallwahrscheinlichkeit wird in unserem Fall direkt aus den Kreditausfall-Swap-Prämien errechnet. 
 
-Die Formel hierzu lautet: 
-\begin{equation}
-PD_{i,t}=\frac{a_t s_{i,t}}{a_t LGD_{i,t}+b_t s_{i,t}}
-\end{equation}
-$PD_{i,t}$ ist hierbei die risiko-neutrale Ausfallwahrscheinlichkeit, $s_{i,t}$ ist die Kreditausfall-Swap-Prämie, $LGD_{i,t}$ ist die Verlustquote, $a_t \equiv \int_{t}^{t+T} e^{-r \tau}d \tau$ und $b_t \equiv \int_{t}^{t+T} \tau e^{-r \tau}d \tau$, wobei $r$ der risikofreie Zinssatz ist.
+% Die Formel hierzu lautet: 
+% \begin{equation}
+% PD_{i,t}=\frac{a_t s_{i,t}}{a_t LGD_{i,t}+b_t s_{i,t}}
+% \end{equation}
+% $PD_{i,t}$ ist hierbei die risiko-neutrale Ausfallwahrscheinlichkeit, $s_{i,t}$ ist die Kreditausfall-Swap-Prämie, $LGD_{i,t}$ ist die Verlustquote, $a_t \equiv \int_{t}^{t+T} e^{-r \tau}d \tau$ und $b_t \equiv \int_{t}^{t+T} \tau e^{-r \tau}d \tau$, wobei $r$ der risikofreie Zinssatz ist.
 
-Das die Ausfallwahrscheinlichkeit aus den Kreditausfall-Swaps bestimmt werden, ist eine risiko-neutrale Messung, da nicht nur die Verlustwahrscheinlichkeit, sondern auch die Risikoprämie mit einbezogen wird. Des Weiteren sind die Werte vorwärtsgerichtet, denn die Kreditausfall-Swap-Prämien sind für eine bestimmte Vertragsperiode gegeben. 
+% Das die Ausfallwahrscheinlichkeit aus den Kreditausfall-Swaps bestimmt werden, ist eine risiko-neutrale Messung, da nicht nur die Verlustwahrscheinlichkeit, sondern auch die Risikoprämie mit einbezogen wird. Des Weiteren sind die Werte vorwärtsgerichtet, denn die Kreditausfall-Swap-Prämien sind für eine bestimmte Vertragsperiode gegeben. 
 
-Des Weiteren wird eine flache Terminstrukturkurve für die Ausfallintensität adaptiert. In der Realität könnte diese Annahme verletzt werden, es kommt aber nur zu geringer Beeinflussung, sodass das Gesamtergebnis nicht beeinträchtigt wird.
-\newpage
-\subsubsection{Kapitalrenditen-Korrelation}
-Um die Kreditausfall-Korrelation zu bestimmen, existieren zwei mögliche Ansätze.
-Zum einen kann man anhand von historischen Daten bezüglich der Kreditausfall die Korrelation bestimmen. Da es aber selten zu Kreditausfällen kommt sind diese Daten nicht sehr genau, vorallem im Bezug auf große Banken.
-Die zweite Möglichkeit ist die Kreditausfall-Korrelation indirekt zu bestimmen. Dies geschieht mit Hilfe der Gesamtkapitalrenditen-Korrelation unter der Berücksichtigung des Aktien- und Kreditmarktes. Hull and White (2004) schlugen jedoch vor, die Gesamtkapitalrenditen-Korrelation durch die Fremdkapitalrenditen-Korrelation darzustellen. Dies wird in diesem Fall auch genau so umgesetzt. Die Gründe dafür sind zum einen, dass das Fremdkapital der am schnellsten gehandelte Anlagegegenstand ist, denn man sieht die Veränderungen am Markt und am Anlagerisiko direkt durch schwankende Aktienpreise. Der zweite Grund ist, dass nur auf dem Aktienmarkt Daten in Echtzeit gegeben sind, was es möglich macht, Korrelation über kurze Zeiträume zu bestimmen, was vorher, bei Verwendung von Tageswerten, nicht möglich war.
-Durch diese hochfrequenten Analysen ist es nun möglich genauere Korrelationswerte als zuvor zu bestimmen.
+% Des Weiteren wird eine flache Terminstrukturkurve für die Ausfallintensität adaptiert. In der Realität könnte diese Annahme verletzt werden, es kommt aber nur zu geringer Beeinflussung, sodass das Gesamtergebnis nicht beeinträchtigt wird.
+% \newpage
+% \subsubsection{Kapitalrenditen-Korrelation}
+% Um die Kreditausfall-Korrelation zu bestimmen, existieren zwei mögliche Ansätze.
+% Zum einen kann man anhand von historischen Daten bezüglich der Kreditausfall die Korrelation bestimmen. Da es aber selten zu Kreditausfällen kommt sind diese Daten nicht sehr genau, vorallem im Bezug auf große Banken.
+% Die zweite Möglichkeit ist die Kreditausfall-Korrelation indirekt zu bestimmen. Dies geschieht mit Hilfe der Gesamtkapitalrenditen-Korrelation unter der Berücksichtigung des Aktien- und Kreditmarktes. Hull and White (2004) schlugen jedoch vor, die Gesamtkapitalrenditen-Korrelation durch die Fremdkapitalrenditen-Korrelation darzustellen. Dies wird in diesem Fall auch genau so umgesetzt. Die Gründe dafür sind zum einen, dass das Fremdkapital der am schnellsten gehandelte Anlagegegenstand ist, denn man sieht die Veränderungen am Markt und am Anlagerisiko direkt durch schwankende Aktienpreise. Der zweite Grund ist, dass nur auf dem Aktienmarkt Daten in Echtzeit gegeben sind, was es möglich macht, Korrelation über kurze Zeiträume zu bestimmen, was vorher, bei Verwendung von Tageswerten, nicht möglich war.
+% Durch diese hochfrequenten Analysen ist es nun möglich genauere Korrelationswerte als zuvor zu bestimmen.
 
-Um statt der Gesamtkapital-Korrelation die Fremdkapital-Korrelation zu nutzen, muss gegeben sein, dass ein konstanter Leverage-Effekt vorliegt, da nur in diesem Fall die Korrelationen des Gesamt -und Fremdkapital gleich sind. Dies ist jedoch nur über kürzere Zeitabschnitte gegeben, daher werden hier die Korrelationen immer für Zeitabschnitte, welche kürzer als ein Quartal sein, bestimmt. Dieser Zeitabschnitt wurde anhand von Beobachtungen bestätigt. Nachdem bleibt im Zeitraum von einem Monat der Leverage-Effekt bei elf von zwölf Banken konstant, nach zwei Monaten sind es noch 10 von 12 und nach drei Monaten sieben von zwölf. Deshalb sollte der Beobachtungsabschnitt unter einem Quartal liegen.
+% Um statt der Gesamtkapital-Korrelation die Fremdkapital-Korrelation zu nutzen, muss gegeben sein, dass ein konstanter Leverage-Effekt vorliegt, da nur in diesem Fall die Korrelationen des Gesamt -und Fremdkapital gleich sind. Dies ist jedoch nur über kürzere Zeitabschnitte gegeben, daher werden hier die Korrelationen immer für Zeitabschnitte, welche kürzer als ein Quartal sein, bestimmt. Dieser Zeitabschnitt wurde anhand von Beobachtungen bestätigt. Nachdem bleibt im Zeitraum von einem Monat der Leverage-Effekt bei elf von zwölf Banken konstant, nach zwei Monaten sind es noch 10 von 12 und nach drei Monaten sieben von zwölf. Deshalb sollte der Beobachtungsabschnitt unter einem Quartal liegen.
 
-Durch die Nutzung von Vorhersagen der Kapitalrenditen-Korrelation, statt dem Heranziehen von historischen Werten, sind die Werte konsistent mit der Vorhersage der Ausfallwahrscheinlichkeiten. Dadurch ist unser Indikator für das systemische Risiko vorwärtsgerichtet. 
+% Durch die Nutzung von Vorhersagen der Kapitalrenditen-Korrelation, statt dem Heranziehen von historischen Werten, sind die Werte konsistent mit der Vorhersage der Ausfallwahrscheinlichkeiten. Dadurch ist unser Indikator für das systemische Risiko vorwärtsgerichtet. 
 
-\newpage
-\subsection{Stresstest}
+% \newpage
+% \subsection{Stresstest}
 
-Blabla!
-\newpage
-\section{Daten}
-Für die empirische Überprüfung der vorher beschriebenen Methoden werden Messwerte benötigt. Hier werden Werte aus dem Bankwesen benutzt, prinzipiell lassen sich mit dieser Methodik aber auch andere Portfolios untersuchen, solange sie die benötigten Vorraussetzungen, wie z.B. einen Kreditausfall-Swap, besitzen. 
-Die hier verwendeten Messwerte stammen aus dem Zeitraum von Januar 2000 bis zum Mai 2008. Es wurden die, zu der Zeit, größten amerikanischen Finanzunternehmen untersucht. Zu den gehörten die Bank of America, Bank of New York, Bear Stearns, Citibank, Goldman Sachs, JP Morgan Chase, Lehman Brothers, Merrill Lynch, Morgan Stanley, State Street Corp, Wachovia und Wells Fargo. 
-Für die Analysen wurden wöchentlich aktualisierte Kreditausfall-Swap-Prämien, Korrelationswerte, welche aus den täglichen Aktienkursen errechnet wurden, und makro-finanzielle Werte, die den aktuellen Zustand der Makroökonomie wiederspiegeln,  verwendet.
+% Blabla!
+% \newpage
+% \section{Daten}
+% Für die empirische Überprüfung der vorher beschriebenen Methoden werden Messwerte benötigt. Hier werden Werte aus dem Bankwesen benutzt, prinzipiell lassen sich mit dieser Methodik aber auch andere Portfolios untersuchen, solange sie die benötigten Vorraussetzungen, wie z.B. einen Kreditausfall-Swap, besitzen. 
+% Die hier verwendeten Messwerte stammen aus dem Zeitraum von Januar 2000 bis zum Mai 2008. Es wurden die, zu der Zeit, größten amerikanischen Finanzunternehmen untersucht. Zu den gehörten die Bank of America, Bank of New York, Bear Stearns, Citibank, Goldman Sachs, JP Morgan Chase, Lehman Brothers, Merrill Lynch, Morgan Stanley, State Street Corp, Wachovia und Wells Fargo. 
+% Für die Analysen wurden wöchentlich aktualisierte Kreditausfall-Swap-Prämien, Korrelationswerte, welche aus den täglichen Aktienkursen errechnet wurden, und makro-finanzielle Werte, die den aktuellen Zustand der Makroökonomie wiederspiegeln,  verwendet.
 
-\newpage
-\section{Empirisches Ergebnis}
-\newpage
-\section{Fazit}
-\newpage
+% \newpage
+% \section{Empirisches Ergebnis}
+% \newpage
+% \section{Fazit}
+% \newpage
 \section{Literaturverzeichnis}
 
 Duffie, D., 1999. Credit swap valuation. Financial Analysts Journal 55, 73-87.
