@@ -169,12 +169,73 @@ Bei dieser Analyse beträgt $R^2$ = 0.55.
 
 In der dritten Regressionsanalyse werden alle Variablen aus den hervorgegangen Analysen verwendet, was in dem Wert von 0.56 für $R^2$ resultiert. Dies zeigt, dass unter der Zuhilfenahme der verzögerten Korrelation, der Marktgewinne und hochfrequenten Korrelation, eine sehr gute Vorhersage für zukünftige Korrelationen gemacht werden kann. Dies wird noch verstärkt durch eine sehr niedrige Fehlerrate von 0.0036, welche deutlich unter der Fehlerrate liegt, die man bei einer direkten Bestimmung aus den Gesamtkapitalkorrelationen erhält (0.0051). 
 
+\begin{figure}[htb]
+	\centering
+		\includegraphics[height=8cm]{Pictures/Table2.png}
+		\caption{Werte der Regressionsanalyse}
+\end{figure}
+
 \subsubsection{Indikator des systemischen Risikos im Bankensektor}
 Durch die nun bestimmten Ausfallwahrscheinlichkeiten und Korrelation lässt sich der Indikator für das systemische Risiko gegen größere Ausfälle im Bankensektor bilden. Hier werden größere Ausfälle, als Ausfälle von mehr als 15\% der Gesamtverbindlichkeiten des Finanzsektors definiert.
 Da für unsere verwendete Methodik eine risikoneutrale Ausfallwahrscheinlichkeit verwendet wird, lässt sich diese hier einfach bestimmen. Die Versicherungsprämie entspricht nämlich der Erwartung eines hypothetischen Portfolios der Banken, welche gleich gleich oder größer des Schwellenwertes von 15\% ist. Dafür die die aktuellste ''Portfolio Credit Risk Technology''\footnote{vgl. Huang et al. S.16 Z.21.} verwendet. Diese basiert auf einer Monte-Carlo-Simulation wie von Tarashev und Zhu (2008) beschrieben. 
-Die SImulation besteht aus zwei Stufen. Zuerst werden verschiedene Joint Default Szenarien, basierend auf den einzelnen Ausfallwahrscheinlichkeiten und Korrelationen, simuliert. Im zweiten Schritt werden, anhand der Ergebnisse aus Schritt 1, die Loss Given Defaults und die gesamten Kreditverluste simuliert. 
+Die Simulation besteht aus zwei Stufen. Zuerst werden verschiedene Joint Default Szenarien, basierend auf den einzelnen Ausfallwahrscheinlichkeiten und Korrelationen, simuliert. Im zweiten Schritt werden, anhand der Ergebnisse aus Schritt 1, die Loss Given Defaults und die gesamten Kreditverluste simuliert. 
 Dieses Vorgehen ist zwar sehr umfangreich und mühsam, hat jedoch den Vorteil, dass es ein allgemeingültiges Ergebnis liefert.
-Dieses Vorgehen passt sehr gut zu unserer Methodik, da die Ausfallwahrscheinlichkeiten der einzelnen Banken verschiedenartig sind, die unterliegenden Variablen ungleich gewichtet sind und der Loss Given Default stochastisch unabhängig von der Ausfallwahrscheinlichkeit ist. 
+Diese Vorgehensweise passt sehr gut zu unserer Methodik, da die Ausfallwahrscheinlichkeiten der einzelnen Banken verschiedenartig sind, die unterliegenden Variablen ungleich gewichtet sind und der Loss Given Default stochastisch unabhängig von der Ausfallwahrscheinlichkeit ist. 
+
+\subsubsection{Verlauf des Indikators über den Beobachtungszeitraum}
+Der Indikator wird hier mit Hilfe von sogenannten Basispunkten angegeben. Zum Start der Beobachtung, in der ersten Hälfte von 2001, ist der Wert des Indikators auf 10 Basispunkte festgelegt. Bis zur zweiten Hälfte von 2002 steigt der Indikator bis auf einen Wert von 35 Basispunkten, da während dieser Zeit hohe Unternehmensverluste zu beobachten waren. Nach diesem Höchststand geht der Indikator des systemischen Risikos wieder zurück, bis er zwischen Ende 2006 und Anfang 2007 seinen Tiefsstand erreicht. Erst im August 2007, zu Beginn der Immobilienkrise, ist wieder ein deutlicher Anstieg des Indikators zu beobachten. Seinen absoluten Höchststand erreichte er im März 2008, zum Höhepunkt der Immobilienkrise. Nach dem, vom Federal Reserve System \footnote{Zentralbank-System der Vereinigten Staaten von Amerika.} vereinfachtem, Aufkauf von Bear Stearn von JP Morgan Chase ging der Indikator wieder stark nach unten.
+
+Die höchste theoretische Versicherungsprämie, die in diesem Zeitraum beobachtet wurde, war im März 2008 zu beobachten und betrug 110 Milliarden US-Dollar.
+Der Trend des Indikator folgt stark dem durchschnittlichem Ausfallrisiko, wird jedoch auch noch durch die gegebenen Korrelationen beeinflusst, wenn auch nicht so stark. Der Höchstwert des Indikators fällt sowohl mit dem Maximalwert der Ausfallwahrscheinlichkeit, als auch mit dem Maximalwert der Korrelation zusammen.
+Die Auswirkungen der Korrelation auf den Indikator lassen sich zum Beispiel Anfang 2001 und Anfang 2003 beobachten, wo die Ausfallwahrscheinlichkeit quasi gleich ist, der Indikator des systemischen Risikos 2003 jedoch höher ist, was mit der Korrelation zusammenhängt, welche 2003 ebenfalls höher war.
+
+\subsubsection{Durchführung des Stresstests}
+Zuerst wird der Makro-Teil des Modells durchgeführt. DIes geschieht durch eine Value at Risk-Analyse. Das Value at Risk gibt an, welchen Wert der Verlust einer Risikoposition mit einer gegeben Wahrscheinlichkeit innerhalb eines bestimmten Zeitraum nicht übersteigt. 
+Die endogenen Variablen für das VAR\footnote{Value at Risk.}-Modell setzen sich aus der durschnittlichen Ausfallwahrscheinlichkeit, der Korrelation in der aktuellen Periode und einer Nummer von makrofinanziellen Faktoren zusammen. Die optimale Verzögerung innerhalb des VAR-Modells entspricht der des ''Schwart Information Criteria''\footnote{vgl. Huang et al. S.18 Z.23 S.19 Z.1.}, und zwar eine Periode. Die endogenen Variablen des Modells sind seriell korreliert, was ein starker Hinweis darauf ist, das eine dynamische Verbindung zwischen den Variablen besteht, so ist die durschnittliche Ausfallwahrscheinlichkeit stark positiv durch die durchschnittliche Korrelation beeinflusst und stark negativ von den Aktienmarktrenditen.
+Daraus lässt sich nun auch herleiten, das ein höheres systemisches Risiko durch gesteigerte Korrelation zu größeren Zahlungsausfällen führt und einen Verschlechterung des Gesamtmarktes zu einer gesteigerten Ausfallwahrscheinlichkeit.
+Des Weiteren lässt sich beobachten, das die durchschnittliche Korrelation stark negativ von der Federal Funds Rate und dem Term Spread beeinflusst wird, was vermuten lässt, das bei einer entspannten Geldpolitik die Kapitalrenditen der Banken enger beieinander liegen. Bei einer angespannten Geldpolitik gehen die Kapitalrenditen jedoch, abhängig vom Aufbau und Zustand der einzelnen Banken, stärker auseinander.  
+Es lässt sich auch feststellen, das die Ausfallwahrscheinlichkeit einen positvien Effekt auf die Entwicklung der Korrelation hat.
+Das VAR-System erlaubt es nun auch die Reaktion der Makroökonomie und des Marktes an sich auf Ereignisse des Bankensystems darzustellen. Während der Beispielperiode ist dieser Effekt jedoch nur sehr gering. Die Vermutung dahinter ist, das die durchschnittliche Ausfallwahrscheinlichkeit einen negativen Effekt auf die Federal Funds Rate hat und dadurch diesen Effekt beeinflusst.
+Bei der Ausfallwahrscheinlichkeit lässt sich jedoch ein positiver Effekt auf den VIX, den Volatilitätsindex des US-Aktienindex S\&P 500, welcher die erwartete Schwankungsbreite repräsentiert, beobachten. Dies ist nachvollziehbar und verträgt sich auch mit der allgemeinen Auffassung des VIX als Maßstab der Angst des Marktes. 
+
+Nun folgt der Mikro-Teil des Modells mit der Bestimmung der Ausfallwahrscheinlichkeiten der einzelnen Banken. Dies geschieht mit Hilfe einer Funktion von verschiedenen verzögerten und abhängigen Variablen und Variablen der aktuellen Makrtperiode, wie zum Beispiel die durchschnittliche Ausfallwahrscheinlichkeit, die Korrelation im Bankensystem und noch weiterer makrofinanzieller Faktoren.
+Die Ausfallwahrscheinlichkeiten der Banken sind untereinander seriell korreliert und signifikant positiv durch die durchschnittliche Ausfallwahrscheinlichkeit des Bankensektors beeinflusst. Die Korrelationen der einzelnen Banken werden jedoch nur zu etwa der Hälfte durch die durschnittliche Korrelation auf dem Bankenmarkt beeinflusst. 
+
+Die makrofinanziellen Faktoren wirken sich sehr unterschiedlich auf die einzelnen Banken aus. Es kann vorkommen, das sich ein Faktor kaum bis gar nicht auswirkt, es kann aber auch vorkommen das sich ein Faktor auf einige Banken positiv, auf andere widerrum negativ auswirkt. So hat die Federal Funds Rate auf vier der beobachteten Banken einen postitiven Einfluss, auf drei andere jedoch einen negativen Einfluss. Dies ist auf die unterschiedlichen Business-Modelle und Bilanzen der Banken während der Beobachtung zurückzuführen. 
+
+
+Basierend auf den vorrangegangen Regressionsresultaten lässt sich der Stresstest in drei Stufen implementieren.
+
+Zuerst werden die hypothetischen Stresstestszenarien anhand der Ergebnisse der VAR-Analysen ausgesucht.
+Danach werden diese hypothetischen Szenarien in das Modell gegeben, um dann die zukünftigen dynamischen Bewegungen aller Variablen des VAR-Systems über bis zu 12 Wochen abzuleiten, da diese die zukünftigen Bewegungen der risikoneutralen Ausfallwahrscheinlichkeiten und der Korrelationen der einzelenen Banken bestimmen. 
+In der letzten Stufe wird aus den Werten für die Ausfallwahrscheinlichkeit und die Korrelation, welche in der zweiten Stufe bestimmt wurden, der neue Indikator für das systemische Risiko bestimmt.
+
+
+Für den wirklichen Stresstest gibt es zwei Ansätze. Einmal den statistischen und dann noch den historischen Ansatz.
+
+Der statistische Ansatz basiert auf der Bootstraping-Methode. Dort werden die Auswirkungen eines Schocks über die nächsten 12 Monate anhand des Regressionsmodells untersucht. Als Resultat erhält man die zukünfitgen Bewegungen des Indikators für das systemische Risiko.
+Bei dieser Methode war ein durschnittlicher Anstieg des Indikators auf 0.41\% zu beobachten, welcher etwa dem Niveau von Ende 2002 und Ende 2007 entspricht. In den schlechtesten 2.5\% der Szenarien stieg der Indikator auf 1.11\% und damit auf einen Wert wie im März 2008, welches dem Höchstand des Indikators entspricht. In den besten 2.5\% der Szenarien fiel der Indikator jedoch auf 0.09\%.
+
+Der historische Ansatz basiert auf vergangenen Schocks des Systems. Hier wurden dafür zwei Beispiel-Schocks gewählt. Zum einen die ''Long Term Capital Management''-Krise von 1998, bei welcher der LTCM Hedgefonds durch falsche Spekulationen erhebliche Verluste erlitt. Zum anderen der Schock nach dem 11. September 2001.
+In beiden Fällen war zu Beobachten, das der Indikator anstieg und in etwa eine Höhe wie im Januar 2008 erreichte. Er lag bei etwa 0.4\% bis 0.5\% der Gesamtverbindlichkeiten.
+Die Resultate lassen vermuten, das während eines Schocks, die Anfälligkeit des Bankensystems steigt. Dies kann von einer mäßigen Anfälligkeit bis zu einer sehr starken Anfälligkeit reichen, wie es auch im Mai 2008 der Fall war. 
+
+Der Vorteil der Bootstraping-Methode ist, dass sie die zukünfitge Verteilung der Bewegungen im systemischen Risiko simulieren kann, wodurch sie gut als Werkzeug für Vorhersagen genutzt werden kann. 
+
+
+Abschließend lässt sich sagen das die Leistung des hier vorgestellten Modells sehr gut ist. Die Messungen und der Stresstest des systemischen Risikos wurden durch realen Werte bestätigt, so wurden für 375 Wochen Vorhersagen gemacht, wobei nur in 13 Wochen die Vorhersage des systemischen Risikos außerhalb des vorhergsagten Vertrauensintervalls lagen. Diese entspricht einer Fehlerquote von gerade einmal 3.5\%.
+Diese Ausreißer traten auch nur bei sehr überraschenden Marktereignissen ein, so war der erste Ausreißer zwischen Juli und September 2007, zu Beginn der Immobilenkrise, zu beobachten und der zweite Ausreißer im März 2008, als die Immobilienkrise iheren Höhepunkt hatte. Diese Fehler kamen aufgrund der starken Verschlechterung des Marktes zustande, mit welcher nicht zu rechnen war.
+
+\section{Fazit}
+
+
+
+\begin{figure}[htb]
+	\centering
+		\includegraphics[height=8cm]{Pictures/Figure3.png}
+		\caption{Verlauf des Indikators des systemischen Risikos}
+\end{figure}
+
 
 \newpage
 \newpage
