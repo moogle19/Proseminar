@@ -96,7 +96,8 @@ Dieser zweite Ansatz wird auch hier genutzt, da das Eigenkapital die höchste Li
 Durch diese schnellen, über kurze Zeitintervalle bestimmten Korrelationswerte ist es möglich noch bessere Voraussagen für die zukünftigen Korrelationen zu treffen. 
 
 Die Benutzung der Fremdkapitalkorrelation als Ersatz für die Gesamtkapitalkorrelation ist jedoch nur bei konstantem Leverage möglich, denn dann ist gegeben, dass die die Korrelation des Fremdkapitals gleich der Korrelation des Gesamtkapital ist. Bei zeitlich schwankendem Leverage gehen diese Werte jedoch deutlich auseinander. 
-In kurzen Zeitabständen kann man jedoch davon ausgehen, dass der Leverage relativ konstant bleibt und die Abweichungen sich nicht auf das Gesamtergebnis auswirken. Deshalb werden hier nur Zeiträume, welche kürzer als ein Quartal sind, analysiert. \footnote{Ein konstanter Leverage über einen Monat war bei 11 der 12 Banken gegeben. Nach zwei Monaten waren es noch 10 Banken. Erst ab dem Zeitraum von drei Monaten war ein großer Rückgang auf 7 Banken zu beobachten. Nach 6 Monaten wiesen nur noch 4 Banken einen konstanten Leverage vor.}
+In kurzen Zeitabständen kann man jedoch davon ausgehen, dass der Leverage relativ konstant bleibt und die Abweichungen sich nicht auf das Gesamtergebnis auswirken.\footnote{Ein konstanter Leverage über einen Monat war bei 11 der 12 Banken gegeben. Nach zwei Monaten waren es 10 Banken. Erst ab dem Zeitraum von drei Monaten war ein großer Rückgang auf 7 Banken zu beobachten. Nach 6 Monaten hatten nur noch 4 Banken einen konstanten Leverage.}
+Deshalb werden hier nur Zeiträume, welche kürzer als ein Quartal sind, analysiert. 
 
 
 Durch diese Herangehensweise, unter der Berücksichtigung der aktuellen Marktentwicklung, statt der Analyse von historischen Daten, ist eine vorwärtsgerichtete Untersuchung der Korrelationen möglich. Das deckt sich mit unserer Berechnung der Ausfallwahrscheinlichkeiten, welche ebenfalls zukunftsorientiert sind. Aus diesen beiden Tatsachen folgt, dass auch unser Indikator für das systemische Risiko ein vorwärtsgerichteter Wert und somit zukunftsorientiert ist. 
@@ -210,7 +211,7 @@ Die Auswirkungen der Korrelation auf den Indikator lassen sich zum Beispiel Anfa
 
 \subsubsection{Durchführung des Stresstests}
 Zuerst wird der makroökonomische Teil des Modells bearbeitet. Dies geschieht durch eine Value at Risk-Analyse. Das Value at Risk gibt an, welchen Wert der Verlust einer Risikoposition mit einer gegeben Wahrscheinlichkeit innerhalb eines bestimmten Zeitraum nicht übersteigt. 
-Die endogenen Variablen für das VAR\footnote{Value at Risk.}-Modell setzen sich aus der durchschnittlichen Ausfallwahrscheinlichkeit, der Korrelation in der aktuellen Periode und einer Nummer von makrofinanziellen Faktoren zusammen. Die optimale Verzögerung innerhalb des VAR-Modells entspricht der des ''Schwartz Information Criteria''\footnote{vgl. Huang et al. S.18 Z.23 S.19 Z.1.}, und zwar einer Periode. Die endogenen Variablen des Modells sind seriell korreliert, was ein starker Hinweis darauf ist, dass eine dynamische Verbindung zwischen den Variablen besteht. Beispielsweise ist die durchschnittliche Ausfallwahrscheinlichkeit stark positiv durch die durchschnittliche Korrelation beeinflusst und stark negativ durch die Höhe der Aktienmarktrenditen.
+Die endogenen Variablen für das VAR\footnote{Value at Risk.}-Modell setzen sich aus der durchschnittlichen Ausfallwahrscheinlichkeit, der Korrelation in der aktuellen Periode und einer Nummer von makrofinanziellen Faktoren zusammen. Die optimale Verzögerung innerhalb des VAR-Modells entspricht der des ''Schwartz Information Criteria''\footnote{vgl. Huang et al. S.18 Z.23 / S.19 Z.1.}, und zwar einer Periode. Die endogenen Variablen des Modells sind seriell korreliert, was ein starker Hinweis darauf ist, dass eine dynamische Verbindung zwischen den Variablen besteht. Beispielsweise ist die durchschnittliche Ausfallwahrscheinlichkeit stark positiv durch die durchschnittliche Korrelation beeinflusst und stark negativ durch die Höhe der Aktienmarktrenditen.
 Daraus lässt sich nun herleiten, dass ein höheres systemisches Risiko durch gesteigerte Korrelation zu größeren Zahlungsausfällen führt und einen Verschlechterung des Gesamtmarktes zu einer gesteigerten Ausfallwahrscheinlichkeit.
 
 Des Weiteren lässt sich beobachten, dass die durchschnittliche Korrelation stark negativ von der Federal Funds Rate und dem Term Spread beeinflusst wird, was vermuten lässt, das bei einer entspannten Geldpolitik die Kapitalrenditen der Banken enger beieinander liegen. Bei einer angespannten Geldpolitik gehen die Kapitalrenditen jedoch, abhängig vom Aufbau und Zustand der einzelnen Banken, stärker auseinander.  
@@ -319,13 +320,13 @@ Major Financial Institutions. Bank for International Settlements Working Papers 
 Duffie, D., 1999. Credit swap valuation. Financial Analysts Journal 55, 73-87.
 \newline
 \newline
-Tarashev, N., Zhu, H., 2008. The pricing of portfolio credit risk: Evidence from
+Tarashev, N., Zhu, H., 2008. The pricing of portfolio credit risk: Evidence from the
 
-the credit derivatives Market. Journal of Fixed Income 18, 5-24.
+credit derivatives Market. Journal of Fixed Income 18, 5-24.
 \newline
 \newline
-Hull, John and Alan White (2004), “Valuation of a CDO and an n-th to default CDS 
+Hull, J., White, A., 2004. Valuation of a CDO and an n-th to default CDS without
 
-without Monte Carlo simulation,” Journal of Derivatives, vol. 12, 8–23
+Monte Carlo simulation. Journal of Derivatives, vol. 12, 8–23
 
 \end{document}
